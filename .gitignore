@@ -1,0 +1,5 @@
+# ignore generated files
+out/**/**.*
+
+# ignore IDE files
+.idea/**/**.*
