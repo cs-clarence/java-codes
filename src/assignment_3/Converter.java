@@ -1,19 +1,24 @@
-import java.util.Scanner;
+package assignment_3;
 
-public class Main {
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
-  public static void main(String[] args) {
+public class Converter {
+
+  public static void main(String[] args) throws IOException {
     double cms = 0.0;
-    Scanner scanner = new Scanner(System.in);
+    InputStreamReader isr = new InputStreamReader(System.in);
+    BufferedReader bf = new BufferedReader(isr);
 
     System.out.print("Input length in cm: ");
-    cms = scanner.nextDouble();
+    cms = Double.parseDouble(bf.readLine());
 
     double inches = cmToInches(cms);
     double yards = inchesToYards(inches);
     double feet = inchesToFeet(inches);
 
-    System.out.printf("%f cm x 1 inch / 2.54cm =  %.2f \n", cms, inches);
+    System.out.printf("%.2f cm x 1 inch / 2.54cm =  %.2f \n", cms, inches);
     System.out.printf(
       "%.2f yards, %.2f feet (foot), and %.2f inch (es)",
       yards,
@@ -25,7 +30,7 @@ public class Main {
   public static double cmToInches(double cms) { return cms * 1 / 2.54; }
 
   public static double inchesToYards(double inches) {
-    return inches * 0.0277777778;
+    return inches / 36;
   }
 
   public static double inchesToFeet(double inches) { return inches / 12; }

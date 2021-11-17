@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/java-code-assignment-3.iml" filepath="$PROJECT_DIR$/java-code-assignment-3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-code-assignments.iml" filepath="$PROJECT_DIR$/java-code-assignments.iml" />
     </modules>
   </component>
 </project>
