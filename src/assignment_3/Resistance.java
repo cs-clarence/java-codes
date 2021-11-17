@@ -22,7 +22,7 @@ public class Resistance {
                        + " ohms");
   }
 
-  public static double resistance(double ampere, double voltage) {
+  public static double resistance(double voltage, double ampere) {
     return voltage / ampere;
   }
 }
