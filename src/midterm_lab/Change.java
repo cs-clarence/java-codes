@@ -31,8 +31,19 @@ public class Change {
     System.out.println(df.format(dollars) + pluralize(" Dollar", dollars));
     System.out.println(df.format(quarters) + pluralize(" Quarter", quarters));
     System.out.println(df.format(dimes) + pluralize(" Dime", dimes));
-    System.out.println(df.format(nickels) + pluralize(" Nickel", nickels) + " and");
+    System.out.println(
+      df.format(nickels) + pluralize(" Nickel", nickels) + " and");
     System.out.println(df.format(change) + pluralize(" Cent", change));
+
+    int angles = 0;
+    {
+      switch (angles) {
+      case 0:
+      case 180: System.out.println("Angle is in X axis"); break;
+      case 90:
+      case 270: System.out.println("Angle is in Y axis"); break;
+      }
+    }
   }
 
   public static String pluralize(String s, Double n) {

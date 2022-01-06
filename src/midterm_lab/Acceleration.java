@@ -19,7 +19,8 @@ public class Acceleration {
     printSpeed(distance, hours, minutes, seconds);
   }
 
-  public static void printSpeed(double distanceInMeters, double hours, double minutes, double seconds) {
+  public static void printSpeed(
+    double distanceInMeters, double hours, double minutes, double seconds) {
     DecimalFormat df = new DecimalFormat("##########.##");
     System.out.println("*********************************************");
     System.out.println("Distance: " + df.format(distanceInMeters));
@@ -27,26 +28,19 @@ public class Acceleration {
     System.out.println("Minutes: " + df.format(minutes));
     System.out.println("Seconds: " + df.format(seconds) + "\n");
 
-    System.out.println("Your speed in meters/second is "
-                       + df.format(distanceInMeters / toSeconds(
-      hours,
-      minutes,
-      seconds
-    )));
+    System.out.println(
+      "Your speed in meters/second is "
+      + df.format(distanceInMeters / toSeconds(hours, minutes, seconds)));
 
-    System.out.println("Your speed in km/h is "
-                       + df.format((distanceInMeters / 1000) / toHours(
-      hours,
-      minutes,
-      seconds
-    )));
+    System.out.println(
+      "Your speed in km/h is "
+      + df.format(
+        (distanceInMeters / 1000) / toHours(hours, minutes, seconds)));
 
-    System.out.println("Your speed in miles/h is "
-                       + df.format((distanceInMeters / 1609) / toHours(
-      hours,
-      minutes,
-      seconds
-    )));
+    System.out.println(
+      "Your speed in miles/h is "
+      + df.format(
+        (distanceInMeters / 1609) / toHours(hours, minutes, seconds)));
 
     System.out.println("*********************************************");
   }
