@@ -11,16 +11,18 @@ public class CountFamilies {
 
     System.out.println();
     for (int i = 0; i < incomes.length; i++) {
-      System.out.print("Please enter income of family member " + (i + 1) + ":");
+      System.out.print("Please enter income of family member "
+                       + (i + 1)
+                       + ": ");
       incomes[i] = scanner.nextDouble();
     }
     System.out.println();
 
     for (int i = 0; i < incomes.length; i++) {
-      System.out.print("Income Family Member #"
-                       + (i + 1)
-                       + " is:"
-                       + incomes[i]);
+      System.out.println("Income Family Member #"
+                         + (i + 1)
+                         + " is: "
+                         + incomes[i]);
     }
 
     System.out.println();
